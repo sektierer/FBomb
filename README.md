@@ -1,7 +1,8 @@
 # FBomb
 
 #Установка
-```git clone https://github.com/Sorami1/FBomb
+```
+git clone https://github.com/Sorami1/FBomb
 cd FBomb
 pip install -r requirements.txt
 ```
