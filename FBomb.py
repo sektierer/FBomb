@@ -24,21 +24,28 @@ def banner():
     print(r"  Версия: 1.0                     ")
     print(RESET_ALL)
 
+def check_version():
+    version = "1.0"
+    if float(version) < float(get("https://raw.githubusercontent.com/Sorami1/FBomb/master/version.txt").text):
+        print(f"\n{BRIGHT}{RED} Версия устарела и нуждается в обновлении!{RESET_ALL} \nСкачать новую версию вы можете здесь: {BRIGHT}{BLUE}https://github.com/Sorami1/FBomb{RESET_ALL}")
+        input('\nНажмите Enter, чтобы вернутся в меню...')
+        main()
+    elif float(version) == float(get("https://raw.githubusercontent.com/Sorami1/FBomb/master/version.txt").text):
+        print(f"\n{BRIGHT}{GREEN} Установлена новейшая версия!{RESET_ALL}")
+        input('\nНажмите Enter, чтобы вернутся в меню...')
+        main()
 
 def main():
     banner()
     print("1. Бомбер")
-    print("2. Обновление")
+    print("2. Проверить обновление")
     print("3. Выход")
     print()
     number = input(f"{BRIGHT}{BLUE}Введите номер:  {RESET_ALL}")
     if number == "1":
         spam_handler()
     elif number == "2":
-        print(f'Скачать обновленную версию вы можете здесь --> {BRIGHT}{BLUE}https://github.com/Sorami1/FBomb{RESET_ALL}')
-        sleep(3)
-        input('Нажмите Enter для перехода в меню')
-        main()
+        check_version()
     elif number == "3":
         print()
         exit()
