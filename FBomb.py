@@ -26,6 +26,7 @@ def banner():
 
 def check_version():
     version = "1.0"
+    check_internet()
     if float(version) < float(get("https://raw.githubusercontent.com/Sorami1/FBomb/master/version.txt").text):
         print(f"\n{BRIGHT}{RED} Версия устарела и нуждается в обновлении!{RESET_ALL} \nСкачать новую версию вы можете здесь: {BRIGHT}{BLUE}https://github.com/Sorami1/FBomb{RESET_ALL}")
         input('\nНажмите Enter, чтобы вернутся в меню...')
@@ -34,6 +35,7 @@ def check_version():
         print(f"\n{BRIGHT}{GREEN} Установлена новейшая версия!{RESET_ALL}")
         input('\nНажмите Enter, чтобы вернутся в меню...')
         main()
+
 
 def main():
     banner()
