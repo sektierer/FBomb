@@ -36,6 +36,9 @@ def main():
         spam_handler()
     elif number == "2":
         print(f'Скачать обновленную версию вы можете здесь --> {BRIGHT}{BLUE}https://github.com/Sorami1/FBomb{RESET_ALL}')
+        sleep(3)
+        input('Нажмите Enter для перехода в меню')
+        main()
     elif number == "3":
         print()
         exit()
