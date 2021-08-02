@@ -28,12 +28,15 @@ def banner():
 def main():
     banner()
     print("1. Бомбер")
-    print("2. Выход")
+    print("2. Обновление")
+    print("3. Выход")
     print()
     number = input(f"{BRIGHT}{BLUE}Введите номер:  {RESET_ALL}")
     if number == "1":
         spam_handler()
     elif number == "2":
+        print(f'Скачать обновленную версию вы можете здесь --> {BRIGHT}{BLUE}https://github.com/Sorami1/FBomb{RESET_ALL}')
+    elif number == "3":
         print()
         exit()
     else:
