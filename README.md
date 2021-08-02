@@ -5,6 +5,8 @@
 # Установка
 Termux/Linux
 ```
+apt install python
+apt install git
 git clone https://github.com/Sorami1/FBomb
 cd FBomb
 pip install -r requirements.txt
