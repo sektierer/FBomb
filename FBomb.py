@@ -20,7 +20,6 @@ def banner():
     print(r"      ║║   ║╚═╝║║╚╝║║║║║╚╝║       ")
     print(r"      ╚╝   ╚═══╝╚══╩╩╩╝╚══╝       ")
     print()
-    print(r"  Discord: discord.gg/v4qfC5YsTM  ")
     print(r"  Версия: 1.0                     ")
     print(RESET_ALL)
 
